@@ -321,6 +321,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
+name = "bcs"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a86ab68e515a8b195b2be6ff544a83b626eb3b15ea435be1fa6b9d4ccd1591ac"
+dependencies = [
+ "serde",
+ "thiserror",
+]
+
+[[package]]
 name = "bincode"
 version = "1.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5937,14 +5947,14 @@ dependencies = [
 
 [[package]]
 name = "serde-generate"
-version = "0.16.0"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d318fbd6ee6b078bf0da7ef6e97152a1a4802125f43443f61a8a8e711ccc1efb"
+checksum = "4d0f85376837e3205327f904948a0dd369a132d63faa645ffc5925b7479daa13"
 dependencies = [
+ "bcs",
  "bincode",
  "heck",
  "include_dir",
- "libra-canonical-serialization",
  "maplit",
  "serde",
  "serde-reflection",
